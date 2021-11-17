@@ -7,6 +7,11 @@ public class Calculadora {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
+		int i = 3;
+		int Nome;
+		
+		Nome = 10;
+		
 		double a,b;
 		System.out.println("Informe o primeiro valor: ");
 		a = scan.nextDouble();
@@ -15,8 +20,10 @@ public class Calculadora {
 		
 		System.out.println("Soma: " + soma(a,b));
 		System.out.println("Subtracao: " + subtracao(a,b));
-		System.out.println("Multiplicacao: " + multiplicacao(a,b));
+		System.out.println("Multiplicacao: " + multiplicacao(Nome,b));
 		System.out.println("Divisao: " + divisao(a,b));
+		//chamando nova função criada
+		System.out.println("Resto de "+a+" dividido por "+b+" é: " + resto(a,b));
 	}
 	
 	public static double soma(double a, double b) {
@@ -33,6 +40,11 @@ public class Calculadora {
 	
 	public static double multiplicacao(double a, double b) {
 		return a * b;
+	}
+
+	//criando nova função para resto da divisao
+	public static double resto(double a, double b) {
+		return a % b;
 	}
 
 }
